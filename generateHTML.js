@@ -39,36 +39,49 @@ function generateHTML(data) {
           @page {
             margin: 0;
           }
+
          *,
          *::after,
          *::before {
          box-sizing: border-box;
          }
+
          html, body {
-         padding: 0;
-         margin: 0;
-         }
+          padding: 0;
+          margin: 0;
+          }
+
          html, body, .wrapper {
-         height: 100%;
-         }
+          height: 100%;
+          }
+
          .wrapper {
-         background-color: ${colors[data.color].wrapperBackground};
-         padding-top: 100px;
+           background-color: ${colors[data.color].wrapperBackground};
+           padding-top: 75px;
          }
+
+         .wrapper-bottom {
+          background-color: ${colors[data.color].wrapperBackground};
+          height: 200px;
+         }
+
          body {
          background-color: white;
          -webkit-print-color-adjust: exact !important;
          font-family: 'Cabin', sans-serif;
          }
+
          main {
          background-color: #E9EDEE;
          height: auto;
          padding-top: 30px;
          }
+
          h1, h2, h3, h4, h5, h6 {
          font-family: 'BioRhyme', serif;
          margin: 0;
          }
+
          h1 {
          font-size: 3em;
          }
@@ -87,19 +100,21 @@ function generateHTML(data) {
          h6 {
          font-size: 1.2em;
          }
+
          .photo-header {
-         position: relative;
-         margin: 0 auto;
-         margin-bottom: -50px;
-         display: flex;
-         justify-content: center;
-         flex-wrap: wrap;
+          position: relative;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
          background-color: ${colors[data.color].headerBackground};
          color: ${colors[data.color].headerColor};
          padding: 10px;
          width: 95%;
          border-radius: 6px;
          }
+
          .photo-header img {
          width: 250px;
          height: 250px;
@@ -109,29 +124,35 @@ function generateHTML(data) {
          border: 6px solid ${colors[data.color].photoBorderColor};
          box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
          }
+
          .photo-header h1, .photo-header h2 {
          width: 100%;
          text-align: center;
          }
+
          .photo-header h1 {
          margin-top: 10px;
          }
+
          .links-nav {
-         width: 100%;
-         text-align: center;
-         padding: 20px 0;
-         font-size: 1.1em;
-         }
-         .nav-link {
-         display: inline-block;
-         margin: 5px 10px;
-         }
+          width: 100%;
+          text-align: center;
+          padding: 0px 0;
+          font-size: 1.1em;
+          }
+
+          .nav-link {
+            flex: 0 auto;
+            margin: 0.5em 1em;
+          }
+
          .workExp-date {
          font-style: italic;
          font-size: .7em;
          text-align: right;
          margin-top: 10px;
          }
+
          .container {
          padding: 50px;
          padding-left: 100px;
@@ -146,9 +167,15 @@ function generateHTML(data) {
            margin-bottom: 20px;
          }
 
+         .row.center {
+          justify-content: center;
+         }
+
          .card {
-           padding: 20px;
-           border-radius: 6px;
+          display: inline-block;
+          width: 40%;
+          padding: 20px;
+          border-radius: 6px;
            background-color: ${colors[data.color].headerBackground};
            color: ${colors[data.color].headerColor};
            margin: 20px;
@@ -174,21 +201,71 @@ function generateHTML(data) {
       </head>
       
       <body>
-          <div class='container'>
-             <div class='row'>
-             <div class='column'>
-             <img src='${data.avator}'>
+
+      <div>
+      <div class='wrapper'>
+        <div class='container'>
+          <div class='photo-header'>
+            <img src= ${data.avator}>
+            <div class='row center'>
+              <h1>Hi!</h1>
+              <h1>My name is ${data.name}</h1>
+              <h5>Currently @ ${data.currentJob}</h5>
+            </div>
+            <div class='row links-nav center'>
+              <h6 class="nav-link"><i class='fas fa-location-arrow'></i>${data.location}</h6>
+              <h6 class="nav-link"><i class='fab fa-github-alt'></i>GitHub</h6>
+              <h6 class="nav-link"><i class="fas fa-rss"></i>blog</h6>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row center">
+        <h3>Graphic Designer and aspiring Developer.</h3> 
+      </div>
+      <div class='container'>
+
+      <div class="col">
+       
+          <div class="card">
+            <h3>Public Repositories</h3>
+            <h6>${data.pubRespository}</h6>
+          </div>
+       
+          <div class="card">
+            <h3>Follwers</h3>
+            <h6>${data.followers}</h6>
+          </div>
+       
+          <div class="card">
+            <h3>Following</h3>
+            <h6>${data.following}</h6>
+          </div>
+       
+          <div class="card">
+            <h3>Stars</h3>
+            <h6>${data.stars}</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper-bottom">
+      </div>
+
+
+          
+
+
              
-
-
-             ${data.name}
-             ${data.currentJob}
-             ${data.location}
-             ${data.bio}
-             ${data.pubRespository}
-             ${data.followers}
-             ${data.following}
-             ${data.stars}
+             
+             
+             
+             
+             
+             
+             
 
 
 

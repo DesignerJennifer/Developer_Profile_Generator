@@ -11,40 +11,49 @@
           @page {
             margin: 0;
           }
+
          *,
          *::after,
          *::before {
          box-sizing: border-box;
          }
+
          html, body {
-         padding: 0;
-         margin: 0;
-         }
+          padding: 0;
+          margin: 0;
+          }
+
          html, body, .wrapper {
-         height: 100%;
-         }
+          height: 100%;
+          }
+
          .wrapper {
-         background-color: #E6E1C3;
-         padding-top: 75px;
+           background-color: #5F64D3;
+           padding-top: 75px;
          }
+
          .wrapper-bottom {
-         background-color: #E6E1C3;
-         height: 200px;
+          background-color: #5F64D3;
+          height: 200px;
          }
+
          body {
          background-color: white;
          -webkit-print-color-adjust: exact !important;
          font-family: 'Cabin', sans-serif;
          }
+
          main {
          background-color: #E9EDEE;
          height: auto;
          padding-top: 30px;
          }
+
          h1, h2, h3, h4, h5, h6 {
          font-family: 'BioRhyme', serif;
          margin: 0;
          }
+
          h1 {
          font-size: 3em;
          }
@@ -62,18 +71,17 @@
          }
          h6 {
          font-size: 1.2em;
-         font-family: 'BioRhyme', serif;
          }
 
          .photo-header {
-         position: relative;
-         margin: 0 auto;
-         margin-bottom: 20px;
-         display: flex;
-         justify-content: center;
-         flex-wrap: wrap;
-         background-color: #C1C72C;
-         color: black;
+          position: relative;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+         background-color: #26175A;
+         color: white;
          padding: 10px;
          width: 95%;
          border-radius: 6px;
@@ -85,32 +93,38 @@
          border-radius: 50%;
          object-fit: cover;
          margin-top: -75px;
-         border: 6px, solid, black;
+         border: 6px solid #73448C;
          box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
          }
+
          .photo-header h1, .photo-header h2 {
          width: 100%;
          text-align: center;
          }
+
          .photo-header h1 {
          margin-top: 10px;
          }
+
          .links-nav {
-         width: 100%;
-         text-align: center;
-         padding: 0px 0;
-         font-size: 1.1em;
-         }
-         .nav-link {
-           flex: 0 auto;
-           margin: 0.5em 1em;
-         }
+          width: 100%;
+          text-align: center;
+          padding: 0px 0;
+          font-size: 1.1em;
+          }
+
+          .nav-link {
+            flex: 0 auto;
+            margin: 0.5em 1em;
+          }
+
          .workExp-date {
          font-style: italic;
          font-size: .7em;
          text-align: right;
          margin-top: 10px;
          }
+
          .container {
          padding: 50px;
          padding-left: 100px;
@@ -120,9 +134,9 @@
          .row {
            display: flex;
            flex-wrap: wrap;
-           /* justify-content: space-between; */
+           justify-content: space-between;
            margin-top: 20px;
-           /* margin-bottom: 20px; */
+           margin-bottom: 20px;
          }
 
          .row.center {
@@ -130,11 +144,11 @@
          }
 
          .card {
-           display: inline-block;
-           width: 40%;
-           padding: 20px;
-           border-radius: 6px;
-           background-color: #C1C72C;
+          display: inline-block;
+          width: 40%;
+          padding: 20px;
+          border-radius: 6px;
+           background-color: #26175A;
            color: white;
            margin: 20px;
          }
@@ -159,66 +173,79 @@
       </head>
       
       <body>
+
       <div>
-        <div class='wrapper'>
-          <div class='container'>
-            <div class='photo-header'>
-              <img src='https://avatars0.githubusercontent.com/u/54449493?v=4'>
-              <div class='row center'>
-                <h1>Hi!</h1>
-                <h1>My name is Jennifer Larson</h1>
-                <h5>Currently @ Summit Litho, Inc</h5>
-              </div>
-              <div class='row links-nav center'>
-                <h6 class="nav-link"><i class='fas fa-location-arrow'></i>Overland Park, KS </h6>
-                <h6 class="nav-link"><i class='fab fa-github-alt'></i> GitHub  </h6>
-                <h6 class="nav-link"><i class="fas fa-rss"></i> blog</h6>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row center">
-          <h3>Graphic Designer and aspiring Developer.</h3> 
-        </div>
+      <div class='wrapper'>
         <div class='container'>
-
-        <div class="col">
-         
-            <div class="card">
-              <h3>Public Repositories</h3>
-              <h6>11</h6>
+          <div class='photo-header'>
+            <img src= https://avatars0.githubusercontent.com/u/54449493?v=4>
+            <div class='row center'>
+              <h1>Hi!</h1>
+              <h1>My name is Jennifer Larson</h1>
+              <h5>Currently @ Summit Litho, Inc</h5>
             </div>
-         
-            <div class="card">
-              <h3>Follwers</h3>
-              <h6>1</h6>
+            <div class='row links-nav center'>
+              <h6 class="nav-link"><i class='fas fa-location-arrow'></i>'Overland Park, KS'</h6>
+              <h6 class="nav-link"><i class='fab fa-github-alt'></i>GitHub</h6>
+              <h6 class="nav-link"><i class="fas fa-rss"></i>blog</h6>
             </div>
-         
-            <div class="card">
-              <h3>Following</h3>
-              <h6>1</h6>
-            </div>
-         
-            <div class="card">
-              <h3>Stars</h3>
-              <h6>5</h6>
-            </div>
-
           </div>
-
-
+          </div>
         </div>
-        <div class="wrapper-bottom"></div>
+      </div>
+
+      <div class="row center">
+        <h3>Graphic Designer and aspiring Developer.</h3> 
+      </div>
+      <div class='container'>
+
+      <div class="col">
+       
+          <div class="card">
+            <h3>Public Repositories</h3>
+            <h6>11</h6>
+          </div>
+       
+          <div class="card">
+            <h3>Follwers</h3>
+            <h6>1</h6>
+          </div>
+       
+          <div class="card">
+            <h3>Following</h3>
+            <h6>1</h6>
+          </div>
+       
+          <div class="card">
+            <h3>Stars</h3>
+            <h6>5</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper-bottom">
+      </div>
+
+
+          
+
+
+             
+             
+             
+             
+             
+             
+             
+             
 
 
 
-
-
-
-
-
+             </div>
+             
+             </div>
+           
+          </div>
       </body>
       </html>
       
