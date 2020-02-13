@@ -25,7 +25,11 @@
          }
          .wrapper {
          background-color: #E6E1C3;
-         padding-top: 100px;
+         padding-top: 75px;
+         }
+         .wrapper-bottom {
+         background-color: #E6E1C3;
+         height: 200px;
          }
          body {
          background-color: white;
@@ -60,6 +64,7 @@
          font-size: 1.2em;
          font-family: 'BioRhyme', serif;
          }
+
          .photo-header {
          position: relative;
          margin: 0 auto;
@@ -73,6 +78,7 @@
          width: 95%;
          border-radius: 6px;
          }
+
          .photo-header img {
          width: 250px;
          height: 250px;
@@ -92,7 +98,7 @@
          .links-nav {
          width: 100%;
          text-align: center;
-         padding: 20px 0;
+         padding: 0px 0;
          font-size: 1.1em;
          }
          .nav-link {
@@ -114,14 +120,13 @@
          .row {
            display: flex;
            flex-wrap: wrap;
-           justify-content: space-between;
+           /* justify-content: space-between; */
            margin-top: 20px;
-           margin-bottom: 20px;
+           /* margin-bottom: 20px; */
          }
 
          .row.center {
           justify-content: center;
-
          }
 
          .card {
@@ -154,48 +159,66 @@
       </head>
       
       <body>
-         <div class='wrapper'>
-        <div class='container'>
-          <div class='photo-header'>
-            <img src='https://avatars0.githubusercontent.com/u/54449493?v=4'>
-            <div class='row'>
-          </div>
-              
-          <h1>Hi!</h1>
-          <br>
-          <h1>My name is Jennifer Larson</h1>
-          <h5>Currently @ Summit Litho, Inc</h5>
-
-            <div class='row links-nav center'>
-              <h6 class="nav-link"><i class='fas fa-location-arrow'></i>Overland Park, KS </h6>
-              <h6 class="nav-link"><i class='fab fa-github-alt'></i> GitHub  </h6>
-              <h6 class="nav-link"><i class="fas fa-rss"></i> blog</h6>
+      <div>
+        <div class='wrapper'>
+          <div class='container'>
+            <div class='photo-header'>
+              <img src='https://avatars0.githubusercontent.com/u/54449493?v=4'>
+              <div class='row center'>
+                <h1>Hi!</h1>
+                <h1>My name is Jennifer Larson</h1>
+                <h5>Currently @ Summit Litho, Inc</h5>
+              </div>
+              <div class='row links-nav center'>
+                <h6 class="nav-link"><i class='fas fa-location-arrow'></i>Overland Park, KS </h6>
+                <h6 class="nav-link"><i class='fab fa-github-alt'></i> GitHub  </h6>
+                <h6 class="nav-link"><i class="fas fa-rss"></i> blog</h6>
+              </div>
+            </div>
             </div>
           </div>
-          
-          <div class="row center">
-           <h3>Graphic Designer and aspiring Developer.</h3> 
+        </div>
+
+        <div class="row center">
+          <h3>Graphic Designer and aspiring Developer.</h3> 
+        </div>
+        <div class='container'>
+
+        <div class="col">
+         
+            <div class="card">
+              <h3>Public Repositories</h3>
+              <h6>11</h6>
+            </div>
+         
+            <div class="card">
+              <h3>Follwers</h3>
+              <h6>1</h6>
+            </div>
+         
+            <div class="card">
+              <h3>Following</h3>
+              <h6>1</h6>
+            </div>
+         
+            <div class="card">
+              <h3>Stars</h3>
+              <h6>5</h6>
+            </div>
+
           </div>
 
-          <div class="col">
-          <div class="card">
-            <h3>Public Repositories</h3>
-            <h6>11</h6>
-          </div>
-          <div class="card">
-            <h3>Follwers</h3>
-            <h6>1</h6>
-          </div>
-          <div class="card">
-            <h3>Following</h3>
-            <h6>1</h6>
-          </div>
-          <div class="card">
-            <h3>Stars</h3>
-            <h6>5</h6>
-          </div>
+
         </div>
-             
+        <div class="wrapper-bottom"></div>
+
+
+
+
+
+
+
+
       </body>
       </html>
       
