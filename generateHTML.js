@@ -182,7 +182,6 @@ function generateHTML(data) {
 
 
              ${data.name}
-
              ${data.currentJob}
              ${data.location}
              ${data.bio}

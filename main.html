@@ -58,11 +58,12 @@
          }
          h6 {
          font-size: 1.2em;
+         font-family: 'BioRhyme', serif;
          }
          .photo-header {
          position: relative;
          margin: 0 auto;
-         margin-bottom: -50px;
+         margin-bottom: 20px;
          display: flex;
          justify-content: center;
          flex-wrap: wrap;
@@ -95,8 +96,8 @@
          font-size: 1.1em;
          }
          .nav-link {
-         display: inline-block;
-         margin: 5px 10px;
+           flex: 0 auto;
+           margin: 0.5em 1em;
          }
          .workExp-date {
          font-style: italic;
@@ -118,11 +119,18 @@
            margin-bottom: 20px;
          }
 
+         .row.center {
+          justify-content: center;
+
+         }
+
          .card {
+           display: inline-block;
+           width: 40%;
            padding: 20px;
            border-radius: 6px;
            background-color: #C1C72C;
-           color: black;
+           color: white;
            margin: 20px;
          }
          
@@ -146,40 +154,48 @@
       </head>
       
       <body>
-         
+         <div class='wrapper'>
         <div class='container'>
           <div class='photo-header'>
             <img src='https://avatars0.githubusercontent.com/u/54449493?v=4'>
-        
             <div class='row'>
- 
-            </div>
-              
- 
-               <h1>Hi!</h1>
-               <br>
-               <h1>My name is Jennifer Larson</h1>
-                
-               </div>
-             </div>
-
-              <div></div>
-
-             Summit Litho, Inc
-             Overland Park, KS
-             Graphic Designer and aspiring Developer.
-             11
-             1
-             1
-             5
-
-
-
-             </div>
-             
-             </div>
-           
           </div>
+              
+          <h1>Hi!</h1>
+          <br>
+          <h1>My name is Jennifer Larson</h1>
+          <h5>Currently @ Summit Litho, Inc</h5>
+
+            <div class='row links-nav center'>
+              <h6 class="nav-link"><i class='fas fa-location-arrow'></i>Overland Park, KS </h6>
+              <h6 class="nav-link"><i class='fab fa-github-alt'></i> GitHub  </h6>
+              <h6 class="nav-link"><i class="fas fa-rss"></i> blog</h6>
+            </div>
+          </div>
+          
+          <div class="row center">
+           <h3>Graphic Designer and aspiring Developer.</h3> 
+          </div>
+
+          <div class="col">
+          <div class="card">
+            <h3>Public Repositories</h3>
+            <h6>11</h6>
+          </div>
+          <div class="card">
+            <h3>Follwers</h3>
+            <h6>1</h6>
+          </div>
+          <div class="card">
+            <h3>Following</h3>
+            <h6>1</h6>
+          </div>
+          <div class="card">
+            <h3>Stars</h3>
+            <h6>5</h6>
+          </div>
+        </div>
+             
       </body>
       </html>
       
