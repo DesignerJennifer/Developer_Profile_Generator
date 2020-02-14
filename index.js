@@ -3,12 +3,18 @@
 var inquirer = require("inquirer");
 //An API that gives code to navigate the file system in node
 var fs = require('fs');
+var pdf = require('html-pdf');
+var html = fs.readFileSync('./main.html' , 'utf8');
+var options = { format: 'Letter' };
+
+pdf.create(html, options).toFile('./DeveloperProfile.pdf', function(err, res) {
+  if (err) return console.log(err);
+  console.log(res); 
+});
 
 var axios = require("axios");
-
 var profile = {}
 
-var generateHTML = require("./generateHTML")
 
 function askQuestions(){
     inquirer.prompt([
@@ -68,33 +74,9 @@ function askQuestions(){
                     })
             })
         })
+
+ 
+	
 }
 
 askQuestions()
-//The function that will collect the data for the user profile
-//A series of quesions that gathers information that will be displayed in their profile.
-//The information will be collected in an Array.
-
-
-//console.log(name, color, currentJob);
-
-
-//Photo of person
-
-
-//User websites and social media:
-    //User's location via Google Maps
-
-    //User GitHub Profile
-
-    //User's Blog
-
-//User's Bio
-
-//User's number of public repositories
-
-//Number of followers on GitHub
-
-//Number of GitHub stars
-
-//Number of people the user is following
