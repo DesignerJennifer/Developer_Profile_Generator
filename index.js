@@ -2,14 +2,11 @@
 //open source code libary with a collection of common interactive command line user interfaces.
 var inquirer = require("inquirer");
 //An API that gives code to navigate the file system in node
-const html2pdf = require('html2pdf');
-
+// const html2pdf = require('html2pdf');
 var fs = require('fs');
-
 
 var axios = require("axios");
 var profile = {}
-
 
 function askQuestions(){
     inquirer.prompt([
@@ -21,6 +18,7 @@ function askQuestions(){
             //User will see this message asking them to type in their name
             message: "What is your GitHub Username?"
         },
+
         {
             //the user will be asked to type a response
             type: "list",
@@ -61,9 +59,8 @@ function askQuestions(){
                         profile.avator = response.data.avatar_url
 
                         console.log(profile)
-                         var html = generateHTML(profile);
-                        fs.writeFile("./main.html", html , function(err){
-
+                         var html = generateHTML('profile');
+                        fs.writeFile("./Bio.html", html , function(err){
                         })
                        
                     })
@@ -75,13 +72,3 @@ function askQuestions(){
 }
 
 askQuestions()
-
-function generatePDF() {
-    // Choose the element that our invoice is rendered in.
-    const element = document.getElementById("body");
-    // Choose the element and save the PDF for our user.
-    html2pdf()
-      .from(element)
-      .save('DeveloperProfile.pdf');
-        }
-

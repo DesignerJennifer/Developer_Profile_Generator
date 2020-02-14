@@ -254,21 +254,6 @@ function generateHTML(data) {
       <div class="wrapper-bottom">
       </div>
 
-
-          
-
-
-             
-             
-             
-             
-             
-             
-             
-             
-
-
-
              </div>
              
              </div>
@@ -279,7 +264,14 @@ function generateHTML(data) {
       
       `
         } 
-
-
-
+        
         module.exports = generateHTML
+
+        function generatePDF() {
+    // Choose the element that our invoice is rendered in.
+        const element = document.getElementById("body");
+    // Choose the element and save the PDF for our user.
+        html2pdf()
+          .from(element)
+         .save('DeveloperProfile.pdf');
+        }
