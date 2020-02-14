@@ -2,15 +2,10 @@
 //open source code libary with a collection of common interactive command line user interfaces.
 var inquirer = require("inquirer");
 //An API that gives code to navigate the file system in node
-var fs = require('fs');
-var pdf = require('html-pdf');
-var html = fs.readFileSync('./main.html' , 'utf8');
-var options = { format: 'Letter' };
+const html2pdf = require('html2pdf');
 
-pdf.create(html, options).toFile('./DeveloperProfile.pdf', function(err, res) {
-  if (err) return console.log(err);
-  console.log(res); 
-});
+var fs = require('fs');
+
 
 var axios = require("axios");
 var profile = {}
@@ -80,3 +75,13 @@ function askQuestions(){
 }
 
 askQuestions()
+
+function generatePDF() {
+    // Choose the element that our invoice is rendered in.
+    const element = document.getElementById("body");
+    // Choose the element and save the PDF for our user.
+    html2pdf()
+      .from(element)
+      .save('DeveloperProfile.pdf');
+        }
+
