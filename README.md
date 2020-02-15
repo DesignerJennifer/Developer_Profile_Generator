@@ -6,3 +6,5 @@ When I enter a GitHub username, a PDF document will be generated with informatio
 
 See the GIF file which demonstrates how to generate the PDF.
 
+
+
