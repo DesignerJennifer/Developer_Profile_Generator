@@ -1,33 +1,4 @@
-const colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
-  },
-  blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-};
-
-function generateHTML(data) {
-  console.log(data)
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -57,12 +28,12 @@ function generateHTML(data) {
           }
 
          .wrapper {
-           background-color: ${colors[data.color].wrapperBackground};
+           background-color: #E6E1C3;
            padding-top: 75px;
          }
 
          .wrapper-bottom {
-          background-color: ${colors[data.color].wrapperBackground};
+          background-color: #E6E1C3;
           height: 200px;
          }
 
@@ -109,8 +80,8 @@ function generateHTML(data) {
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
-         background-color: ${colors[data.color].headerBackground};
-         color: ${colors[data.color].headerColor};
+         background-color: #C1C72C;
+         color: black;
          padding: 10px;
          width: 95%;
          border-radius: 6px;
@@ -122,7 +93,7 @@ function generateHTML(data) {
          border-radius: 50%;
          object-fit: cover;
          margin-top: -75px;
-         border: 6px solid ${colors[data.color].photoBorderColor};
+         border: 6px solid #black;
          box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
          }
 
@@ -177,8 +148,8 @@ function generateHTML(data) {
           width: 40%;
           padding: 20px;
           border-radius: 6px;
-           background-color: ${colors[data.color].headerBackground};
-           color: ${colors[data.color].headerColor};
+           background-color: #C1C72C;
+           color: black;
            margin: 20px;
          }
          
@@ -207,14 +178,14 @@ function generateHTML(data) {
       <div class='wrapper'>
         <div class='container'>
           <div class='photo-header'>
-            <img src= ${data.avator}>
+            <img src= https://avatars0.githubusercontent.com/u/54449493?v=4>
             <div class='row center'>
               <h1>Hi!</h1>
-              <h1>My name is ${data.name}</h1>
-              <h5>Currently @ ${data.currentJob}</h5>
+              <h1>My name is Jennifer Larson</h1>
+              <h5>Currently @ Summit Litho, Inc</h5>
             </div>
             <div class='row links-nav center'>
-              <h6 class="nav-link"><i class='fas fa-location-arrow'></i>${data.location}</h6>
+              <h6 class="nav-link"><i class='fas fa-location-arrow'></i>Overland Park, KS</h6>
               <h6 class="nav-link"><i class='fab fa-github-alt'></i>GitHub</h6>
               <h6 class="nav-link"><i class="fas fa-rss"></i>blog</h6>
             </div>
@@ -232,22 +203,22 @@ function generateHTML(data) {
        
           <div class="card">
             <h3>Public Repositories</h3>
-            <h6>${data.pubRespository}</h6>
+            <h6>11</h6>
           </div>
        
           <div class="card">
             <h3>Follwers</h3>
-            <h6>${data.followers}</h6>
+            <h6>1</h6>
           </div>
        
           <div class="card">
             <h3>Following</h3>
-            <h6>${data.following}</h6>
+            <h6>1</h6>
           </div>
        
           <div class="card">
             <h3>Stars</h3>
-            <h6>${data.stars}</h6>
+            <h6>5</h6>
           </div>
         </div>
       </div>
@@ -262,7 +233,4 @@ function generateHTML(data) {
       </body>
       </html>
       
-      `
-        } 
-        
-        module.exports = generateHTML
+      

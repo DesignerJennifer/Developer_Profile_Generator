@@ -4,9 +4,11 @@ var inquirer = require("inquirer");
 //An API that gives code to navigate the file system in node
 // const html2pdf = require('html2pdf');
 var fs = require('fs');
-
+var generateHTML = require('./generateHTML')
 var axios = require("axios");
 var profile = {}
+var convertFactory = require("electron-html-to")
+
 
 function askQuestions(){
     inquirer.prompt([
@@ -59,16 +61,29 @@ function askQuestions(){
                         profile.avator = response.data.avatar_url
 
                         console.log(profile)
-                         var html = generateHTML('profile');
-                        fs.writeFile("./Bio.html", html , function(err){
+                         var html = generateHTML(profile);
+                         console.log(html)
+                         var conversion = convertFactory({
+                             converterPath: convertFactory.converters.PDF
+                         })
+
+                         conversion({ html: html}, function(err, result) {
+                             if (err) {return console.error(err)
+                         }
+
+                         console.log(result.numberOfPages)
+                         result.stream.pipe(fs.createWriteStream("bio.pdf"))
                         })
-                       
-                    })
+
+
+
+
+            
             })
-        })
+        
 
  
 	
-}
-
+})
+        })}
 askQuestions()
